@@ -1,30 +1,9 @@
-# React + TypeScript + Vite
+- В этот раз по ходу написания оставлял больше комментариев, где-то пояснительные, где-то больше про то, что я пытался объяснить себе самому выбранное решение
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Отказался от SASS. После использования css modules первый мне вообще показался бесполезным в случае написания на React. CSS Modules показался мне близким по своим принципам с Tailwind, а Tailwind мне нравится, так что буду впредь использовать CSS Modules (он еще и в стеке E-Soft)
 
-Currently, two official plugins are available:
+- Для удобства проверки компонентов добавил MUI табы. Было бы лучше для практики попробовать роутинг, но мы до этого еще дойдем)))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- К 4 домашке в целом я стал делать меньше упор на стилизацию и больше на функционал
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+P.S. но в компоненте таймера можете наблюдать, что творец во мне еще не окончательно разочаровался в этом мире, чет пытается еще красивенько делать
