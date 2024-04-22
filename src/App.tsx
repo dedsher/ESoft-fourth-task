@@ -1,42 +1,34 @@
-
-import { useState } from 'react';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import CountdownTimer from '@components/CountdownTimer/CountdownTimer'
-import UserList from '@components/UserList/UserList'
-import WindowSize from '@components/WindowSize/WindowSize'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  const [value, setValue] = useState('1');
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
+  const [count, setCount] = useState(0)
 
   return (
-    <Box sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', typography: 'body1' }}>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange}>
-            <Tab label="CountdownTimer" value="1" />
-            <Tab label="UserList" value="2" />
-            <Tab label="WindowSize" value="3" />
-          </TabList>
-        </Box>
-        <TabPanel sx={{ height: '100%' }} value="1">
-          <CountdownTimer />
-        </TabPanel>
-        <TabPanel sx={{ height: '100%' }} value="2">
-          <UserList />
-        </TabPanel>
-        <TabPanel sx={{ height: '100%' }} value="3">
-          <WindowSize />
-        </TabPanel>
-      </TabContext>
-    </Box>
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
 }
 
