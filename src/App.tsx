@@ -19,20 +19,20 @@ function App() {
   return (
     <Box className="box">
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box className="boxInner">
           <TabList onChange={handleChange}>
             <Tab label="CountdownTimer" value="1" />
             <Tab label="UserList" value="2" />
             <Tab label="WindowSize" value="3" />
           </TabList>
         </Box>
-        <TabPanel sx={{ height: '100%' }} value="1">
+        <TabPanel className='tabPanel' value="1">
           <CountdownTimer />
         </TabPanel>
-        <TabPanel sx={{ height: '100%' }} value="2">
+        <TabPanel className='tabPanel' value="2">
           <UserList />
         </TabPanel>
-        <TabPanel sx={{ height: '100%' }} value="3">
+        <TabPanel className='tabPanel' value="3">
           <WindowSize />
         </TabPanel>
       </TabContext>
